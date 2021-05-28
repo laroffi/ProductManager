@@ -4,11 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BookTest {
+class SmartphoneTest {
     @Test
     public void shouldHaveAllFieldsAndMethodFromSuperClass() {
-        Book book = new Book();
-
+        Smartphone smartphone = new Smartphone();
+//        smartphone.
     }
-
 }

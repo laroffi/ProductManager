@@ -10,6 +10,7 @@ class ProductTest {
         Product first = new Product(1, "Java I", 1000);
         Product second = new Product(1, "Java I", 1000);
         assertEquals(first, second);
+
     }
 }
 
