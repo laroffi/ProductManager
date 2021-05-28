@@ -8,7 +8,7 @@ import ru.netology.domain.Smartphone;
 import ru.netology.repository.ProductRepository;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+
 
 class ProductManagerTest {
     private ProductRepository repository = new ProductRepository();
@@ -19,6 +19,7 @@ class ProductManagerTest {
     private Product fourth = new Smartphone(4, "Iphone 10", 50000, "Apple");
     private Product fifth = new Book(5, "Newton's Apple", 400, "G. Orwell");
     private Product sixth = new Smartphone(6, "Coral Phone", 60000, "Windows");
+    private Product seventh = new Product(7, "VHS", 650);
 
     @BeforeEach
     public void setUp() {
@@ -84,12 +85,14 @@ class ProductManagerTest {
         assertArrayEquals(expected, actual);
     }
 
-//    @Test
-//    public void shouldSearchNoName() {
-//        Product[] expected = new Product[]{};
-//        Product[] actual = manager.searchBy();
-//        assertArrayEquals(expected, actual);
-//    }
+    @Test
+    public void shouldSearchNoName() {
+        manager.add(seventh);
+
+        Product[] expected = new Product[]{};
+        Product[] actual = manager.searchBy("VHS");
+        assertArrayEquals(expected, actual);
+    }
 
 
 }
