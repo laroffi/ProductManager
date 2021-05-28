@@ -3,6 +3,7 @@ package ru.netology.repository;
 import ru.netology.domain.Product;
 
 public class ProductRepository {
+
     private Product[] items = new Product[0];
 
     public void save(Product item) {
@@ -14,9 +15,7 @@ public class ProductRepository {
         items = tmp;
     }
 
-    public Product[] findAll() {
-        return items;
-    }
+    public Product[] findAll() { return items; }
 
     public Product findById(int id) {
         for (Product item : items) {
@@ -39,4 +38,5 @@ public class ProductRepository {
         }
         items = tmp;
     }
+
 }
